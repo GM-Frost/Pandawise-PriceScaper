@@ -1,3 +1,4 @@
+import Modal from "@/components/Modal";
 import PriceInfoCard from "@/components/PriceInfoCard";
 import ProductCard from "@/components/ProductCard";
 import { getProductById, getSimilarProducts } from "@/lib/actions";
@@ -73,11 +74,11 @@ const ProductDetails = async ({ params: { id } }: Props) => {
             </div>
             <div className="product-info">
               <div className="flex flex-col gap-2">
-                <p className="text-[34px] text-secondary font-bold">
+                <p className="text-[34px] text-green-500 font-bold">
                   {product.currency}
                   {formatNumber(product.currentPrice)}
                 </p>
-                <p className="text-[21px] text-black opacity-50 line-through">
+                <p className="text-[21px] text-red-500 opacity-50 line-through">
                   {product.currency}
                   {formatNumber(product.originalPrice)}
                 </p>
@@ -147,7 +148,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
               </div>
             </div>
           </div>
-          Modal
+          <Modal productId={id} />
         </div>
       </div>
       <div className="flex flex-col gap-16">
