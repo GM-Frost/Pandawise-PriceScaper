@@ -24,10 +24,10 @@ export async function generateEmailBody(
 
   switch (type) {
     case Notification.WELCOME:
-      subject = `Welcome to PandaWise Tracking for ${shortenedTitle}`;
+      subject = `Welcome to WisePanda Tracking for ${shortenedTitle}`;
       body = `
         <div>
-          <h2>Welcome to PandaWise Tracker 🚀</h2>
+          <h2>Welcome to WisePanda Tracker 🚀</h2>
           <p>You are now tracking ${product.title}.</p>
           <p>Here's an example of how you'll receive updates:</p>
           <div style="border: 1px solid #ccc; padding: 10px; background-color: #f8f8f8;">
@@ -86,10 +86,10 @@ const transporter = nodemailer.createTransport({
     user: "nayanbastola777@hotmail.com",
     pass: process.env.EMAIL_PASSWORD,
   },
-  secure: false,
-  tls: {
-    rejectUnauthorized: false,
-  },
+  // secure: false,
+  // tls: {
+  //   rejectUnauthorized: false,
+  // },
 });
 
 export const sendEmail = async (
@@ -102,10 +102,10 @@ export const sendEmail = async (
     html: emailContent.body,
     subject: emailContent.subject,
     secure: true,
-    secureConnection: false,
-    tls: {
-      rejectUnauthorized: false,
-    },
+    // secureConnection: false,
+    // tls: {
+    //   rejectUnauthorized: false,
+    // },
   };
 
   transporter.sendMail(mailOptions, (error: any, info: any) => {
