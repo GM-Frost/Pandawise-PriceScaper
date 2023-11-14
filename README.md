@@ -44,6 +44,9 @@ WisePanda - Price Tracker is Amazon Price Tracker. A Next.js web scraper applica
 - [MongoDB](https://www.mongodb.com/)
 - [Vercel](https://vercel.com/)
 
+- [Brightdata](https://brightdata.com/) - Scraper
+- [Cheerio](https://cheerio.js.org/) - Parser
+
 ## Dependencies
 
 - [HeadlessUI](https://headlessui.dev/)
