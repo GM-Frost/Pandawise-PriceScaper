@@ -87,7 +87,10 @@ const transporter = nodemailer.createTransport({
     user: "nayanbastola777@hotmail.com",
     pass: process.env.EMAIL_PASSWORD,
   },
-  maxConnections: 1,
+  tls: {
+    // do not fail on invalid certs
+    rejectUnauthorized: false,
+  },
 });
 
 export const sendEmail = async (
