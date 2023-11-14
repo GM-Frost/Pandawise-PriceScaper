@@ -33,6 +33,7 @@ Amazon Price Tracker is a Next.js web scraper application that extracts product 
 ![canvas](https://github.com/GM-Frost/Pandawise-PriceScaper/assets/110303752/a4579aaf-7c53-4f69-b289-b0ec72b2a722)
 ![canvas](https://github.com/GM-Frost/Pandawise-PriceScaper/assets/110303752/25165e13-0427-4cbf-951c-191b4dff2a68)
 ![image](https://github.com/GM-Frost/Pandawise-PriceScaper/assets/110303752/2e19180c-2240-44e7-b31b-85c30bc30438)
+![image](https://github.com/GM-Frost/Pandawise-PriceScaper/assets/110303752/c4b58f59-f6f2-40b7-994d-4e69c1d74878)
 
 
 
