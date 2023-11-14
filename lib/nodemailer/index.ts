@@ -81,11 +81,12 @@ export async function generateEmailBody(
 const transporter = nodemailer.createTransport({
   pool: true,
   service: "hotmail",
-  port: 587,
+  port: 2525,
   auth: {
     user: "nayanbastola777@hotmail.com",
     pass: process.env.EMAIL_PASSWORD,
   },
+  maxConnections: 1,
   // secure: false,
   // tls: {
   //   rejectUnauthorized: false,
@@ -101,7 +102,7 @@ export const sendEmail = async (
     to: sendTo,
     html: emailContent.body,
     subject: emailContent.subject,
-    secure: true,
+    // secure: true,
     // secureConnection: false,
     // tls: {
     //   rejectUnauthorized: false,
