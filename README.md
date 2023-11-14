@@ -19,7 +19,7 @@ Panda Price Tracker
 
 ## Introduction
 
-Amazon Price Tracker is a Next.js web scraper application that extracts product information, including images, description, and price, from Amazon using provided URLs. The data is stored in MongoDB, allowing users to track products by email and receive notifications for price changes. Built with Next.js, MongoDB, and deployed on Vercel.
+WisePanda - Price Tracker is Amazon Price Tracker. A Next.js web scraper application that extracts product information, including images, description, and price, from Amazon using provided URLs. The data is stored in MongoDB, allowing users to track products by email and receive notifications for price changes. Built with Next.js, MongoDB, and deployed on Vercel.
 
 ## Features
 
