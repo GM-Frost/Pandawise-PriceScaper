@@ -27,7 +27,7 @@ export async function generateEmailBody(
       subject = `Welcome to WisePanda Tracking for ${shortenedTitle}`;
       body = `
         <div>
-          <h2>Welcome to WisePanda Tracker 🚀</h2>
+          <h2>🚀🐼🌟 Welcome to WisePanda Tracker 🌟🐼🚀</h2>
           <p>You are now tracking ${product.title}.</p>
           <p>Here's an example of how you'll receive updates:</p>
           <div style="border: 1px solid #ccc; padding: 10px; background-color: #f8f8f8;">
@@ -81,14 +81,13 @@ export async function generateEmailBody(
 const transporter = nodemailer.createTransport({
   pool: true,
   host: "smtp-mail.outlook.com",
-  port: 465,
-  secure: false,
+  service: "hotmail",
   auth: {
     user: "nayanbastola777@hotmail.com",
     pass: process.env.EMAIL_PASSWORD,
   },
+  secure: false,
   tls: {
-    // do not fail on invalid certs
     rejectUnauthorized: false,
   },
 });
