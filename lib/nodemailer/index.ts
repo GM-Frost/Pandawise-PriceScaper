@@ -92,6 +92,16 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+(async () => {
+  try {
+    await transporter.verify();
+    console.log("Server is ready to take our messages");
+  } catch (error) {
+    console.error(error);
+    // Handle the error as needed
+  }
+})();
+
 export const sendEmail = async (
   emailContent: EmailContent,
   sendTo: string[]
@@ -103,11 +113,16 @@ export const sendEmail = async (
     subject: emailContent.subject,
   };
 
-  transporter.sendMail(mailOptions, (error: any, info: any) => {
-    if (error) {
-      console.error(error);
-      throw error;
-    }
-    console.log("Email sent ", info);
+  await new Promise((resolve, reject) => {
+    // send mail
+    transporter.sendMail(mailOptions, (err, info) => {
+      if (err) {
+        console.error(err);
+        reject(err);
+      } else {
+        console.log(info);
+        resolve(info);
+      }
+    });
   });
 };
