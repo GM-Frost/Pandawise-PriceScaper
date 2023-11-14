@@ -18,7 +18,7 @@ const Navbar = () => {
             alt="Logo"
           />
           <p className="nav-logo">
-            Price<span className="text-primary">Wise</span>
+            Wise<span className="text-primary">Panda</span>
           </p>
         </Link>
         <div className="flex items-center gap-5">
